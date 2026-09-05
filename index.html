@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html>
 
-  <body style="background-color: rgba(255, 217, 0, 0.76); font-family: Georgia, 'Times New Roman';">
-    <h1 style="text-align: center; color: rgb(80, 78, 78); margin: 8px; padding: 8px;">ChessOS</h1>
-    <h3 style="color: rgb(148, 110, 13); text-align: center; margin: 8px;">Chess is the art which expresses the science of logic <br>
-        -Mikhail Botvinik
-    </h3>
-    <img src="pfp 2.webp" style="display: block; margin: 0 auto; width: 768px; height: 512px; object-fit: cover;" />
-    <a href="https://www.chess.com">chess</a>
-    <a href="https://www.lichess.org">lichess</a>
-    <h3 style="color: rgb(82, 79, 79); text-align: center; margin: 8px;">The ability to play chess is the sign of a gentleman.
-        <br>The ability to play chess will is the sign of a wasted life.
-        <br>-Paul Morphy
-    </h3>
+  <body style="background-image:url(./pfp\ 2.webp); background-size: cover; font-family: Georgia, 'Times New Roman';">
+    <div style=" width: 100%; border-radius: 64px; position: absolute; top: 0%; left: 50%;
+    transform: translate(-50%); background-color: rgba(212, 175, 55, 0.25); display: flex; justify-content: space-between;">
+        <h1 style="text-align: center; color: rgb(237, 194, 107);">ChessOS</h1>
+        <h3 style="color: rgba(240, 240, 242, 0.75); text-align: center; text-shadow: 0px 2px 5px rgba(0, 0, 0, 1), 
+        0px, 0px, 3px, rgba(0, 0, 0, 1); font-weight: bold;">Chess is the art which expresses the science of logic <br>
+            -Mikhail Botvinik
+        </h3>
+        <h3 style="color: rgb(237, 194, 107); text-align: center;" id="timeElement">Time
+        </h3>
+    </div>
+    <script>
+        function updateTime(){
+            var TimeToGetWatch = new Date().toLocaleString();
+            var timeText = document.querySelector("#timeElement");
+            timeText.innerHTML = TimeToGetWatch;
+        }
+        setInterval(updateTime, 1000);
+    </script>
   </body>
 
 </html>
