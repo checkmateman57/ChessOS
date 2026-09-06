@@ -3,7 +3,7 @@
 
   <body style="background-image:url(./pfp\ 2.webp); background-size: cover; font-family: Georgia, 'Times New Roman';">
     <div style=" width: 100%; border-radius: 64px; position: absolute; top: 0%; left: 50%;
-    transform: translate(-50%); background-color: rgba(212, 175, 55, 0.25); display: flex; justify-content: space-between;">
+    transform: translate(-50%); background-color: rgba(212, 175, 55, 0.25); display: flex; justify-content: space-between;" id="welcome">
         <h1 style="text-align: center; color: rgb(237, 194, 107);">ChessOS</h1>
         <h3 style="color: rgba(240, 240, 242, 0.75); text-align: center; text-shadow: 0px 2px 5px rgba(0, 0, 0, 1), 
         0px, 0px, 3px, rgba(0, 0, 0, 1); font-weight: bold;">Chess is the art which expresses the science of logic <br>
@@ -11,15 +11,19 @@
         </h3>
         <h3 style="color: rgb(237, 194, 107); text-align: center;" id="timeElement">Time
         </h3>
+        <div id="welcomeheader" style="position: absolute; right: 260px; font-size: 28px; cursor: move">
+            &#9823;
+        </div>
+        <div id="welcomeopen" style="position: absolute; left: 260px; font-size: 28px; cursor: pointer">
+            &#9823;
+        </div>
     </div>
-    <script>
-        function updateTime(){
-            var TimeToGetWatch = new Date().toLocaleString();
-            var timeText = document.querySelector("#timeElement");
-            timeText.innerHTML = TimeToGetWatch;
-        }
-        setInterval(updateTime, 1000);
-    </script>
+    <div style="background-color: antiquewhite; position: absolute; top: 25%; left: 10%; display: none;" id="welcomeScreen">
+        <h2>Welcome</h2>
+        <p id="welcomeclose" style="cursor: pointer;">Close</p>
+
+    </div>
+    <script src="script.js"></script>
   </body>
 
 </html>
