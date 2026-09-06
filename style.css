@@ -1,0 +1,33 @@
+.className {
+    z-index: 5;
+    font-size: "16px";
+    overflow: "hidden";
+
+}
+
+.closebutton {
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: 6px;
+}
+
+.window {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    background-color: antiquewhite;
+}
+
+.windowheader {
+    cursor: grab;
+    justify-content: space-between;
+    margin-top: 8px;
+
+}
+
+.headertext {
+    margin: 0px;
+    color: #fff;
+    font-weight: 500;
+    
+}
