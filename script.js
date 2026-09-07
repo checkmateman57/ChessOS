@@ -5,7 +5,7 @@ function updateTime(){
         }
         setInterval(updateTime, 1000);
 
-dragElement(document.getElementById("welcome"));
+dragElement(document.getElementById("welcomeScreen"));
 
 function dragElement(element) {
   var initialX = 0;
@@ -58,10 +58,26 @@ var welcomeScreenClose = document.querySelector("#welcomeclose")
 
 var welcomeScreenOpen = document.querySelector("#welcomeopen")
 
+var AlgebraicScreen = document.querySelector("#AlgebraicScreen")
+
 welcomeScreenClose.addEventListener("click", function() {
     closeWindow(welcomeScreen)
 })
 
 welcomeScreenOpen.addEventListener("click", function() {
     openWindow(welcomeScreen)
+})
+
+var algebraicScreenClose = document.querySelector("#AlgebraicClose")
+
+var algebraicScreenOpen = document.querySelector("#AlgebraicOpener")
+
+algebraicScreenClose.addEventListener("click", function() {
+  closeWindow(AlgebraicScreen)
+  algebraicScreenOpen.classList.remove("selected");
+})
+
+algebraicScreenOpen.addEventListener("click", function() {
+  openWindow(AlgebraicScreen)
+  algebraicScreenOpen.classList.add("selected")
 })

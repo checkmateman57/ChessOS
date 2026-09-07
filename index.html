@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script type="module" src="./script.js"></script>
+        <script type="module" src="./script.js?v1"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
   <body style="background-image:url(./pfp\ 2.webp); background-size: cover; font-family: Georgia, 'Times New Roman';">
@@ -14,20 +14,40 @@
         </h3>
         <h3 style="color: rgb(237, 194, 107); text-align: center;" id="timeElement">Time
         </h3>
-        <div id="welcomeheader" style="position: absolute; right: 260px; font-size: 28px; cursor: move">
-            &#9823;
-        </div>
         <div id="welcomeopen" style="position: absolute; left: 260px; font-size: 28px; cursor: pointer">
             &#9823;
         </div>
+        <div style="position: absolute; right: 260px; font-size: 28px; cursor: move" id="welcomeheader">
+            &#9823;
+        </div>
     </div>
-    <div style="background-color: antiquewhite; position: absolute; top: 25%; left: 10%; display: none;" id="welcomeScreen">
-        <h2>Welcome</h2>
-        <p id="welcomeclose" style="cursor: pointer;">Close</p>
-
-    </div>
-    <div class="closebutton" id="welcomeheader">
+    <div style="background-color: rgb(53, 44, 14); position: absolute; top: 25%; left: 10%; display: none;
+    border-radius: 16px; overflow: hidden;" id="welcomeScreen">
+        <div style="background-color: rgba(110, 77, 37, 1); width: 100%; height: 16px; 
+        overflow: hidden;"
+        id="welcomeScreenheader">
+            <div id="welcomeclose" style="font-size: 16px; cursor: pointer; position: absolute; left: 32px; top: -3px;">
+                &#9820;
+            </div>
+        </div>
+        <h2 style="color: rgb(240, 240, 242); text-align: center;">Welcome to ChessOS!</h2>
+        <p style="color: rgb(237, 194, 107); text-align: center; padding: 0 20px;">This OS is chess themed because chess has been a part <br>
+             of my life for almost my entire life. <br>    </p>
         
+    </div>
+    <div id="AlgebraicOpener" style=" position: absolute; top: 50%; left: 128px; cursor: pointer;">
+        <div style="text-align: center;">
+            <img src="Chess icon1.png" style="margin-top: 4px;" >
+            <p style="color: rgb(212, 159, 92); margin-left: 4px; margin-bottom: 4px; margin-right: 4px;
+             margin-top: 4px;"> Algebraic Notation</p>
+        </div>
+    </div>
+    <div id="AlgebraicScreen" style="background-color: rgb(53, 44, 14); position: absolute; top: 25%; left: 10%; display: none;
+    border-radius: 16px; overflow: hidden; width: 512px; height: 256px;">
+        <div id="AlgebraicClose">
+            <p>Close</p>
+        </div>
+        <textarea id="notesArea" style="width: 100%; height: 200px; box-sizing: border-box;"></textarea>
     </div>
   </body>
 
