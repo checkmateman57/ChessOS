@@ -7,6 +7,8 @@ function updateTime(){
 
 dragElement(document.getElementById("welcomeScreen"));
 
+dragElement(document.getElementById("AlgebraicScreen"))
+
 function dragElement(element) {
   var initialX = 0;
   var initialY = 0;
