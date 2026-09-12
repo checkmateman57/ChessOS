@@ -9,6 +9,12 @@ dragElement(document.getElementById("welcomeScreen"));
 
 dragElement(document.getElementById("AlgebraicScreen"))
 
+dragElement(document.getElementById("Play"))
+
+var topbar = document.querySelector("#welcome")
+
+var biggestIndex = 1;
+
 function dragElement(element) {
   var initialX = 0;
   var initialY = 0;
@@ -48,12 +54,28 @@ function dragElement(element) {
 }
 var welcomeScreen = document.querySelector("#welcomeScreen")
 
+var Play = document.querySelector("#Play")
+
 function closeWindow(element) {
     element.style.display = "none"
 }
 
-function openWindow(element){
-    element.style.display = "block"
+function openWindow(element) {
+  element.style.display = "block";
+  biggestIndex++;
+  element.style.zIndex = biggestIndex;
+  topbar.style.zIndex = biggestIndex + 1;
+}
+
+function openVisibility(element) {
+  element.style.visibility = "visible";
+  biggestIndex++;
+  element.style.zIndex = biggestIndex;
+  topbar.style.zIndex = biggestIndex + 1;
+}
+
+function closeVisibility(element) {
+  element.style.visibility = "hidden";
 }
 
 var welcomeScreenClose = document.querySelector("#welcomeclose")
@@ -61,6 +83,8 @@ var welcomeScreenClose = document.querySelector("#welcomeclose")
 var welcomeScreenOpen = document.querySelector("#welcomeopen")
 
 var AlgebraicScreen = document.querySelector("#AlgebraicScreen")
+
+var PlayClose = document.querySelector("#PlayClose")
 
 welcomeScreenClose.addEventListener("click", function() {
     closeWindow(welcomeScreen)
@@ -83,3 +107,29 @@ algebraicScreenOpen.addEventListener("click", function() {
   openWindow(AlgebraicScreen)
   algebraicScreenOpen.classList.add("selected")
 })
+
+var PlayOpener = document.querySelector("#PlayOpener")
+
+PlayOpener.addEventListener("click", function() {
+  openVisibility(Play)
+})
+
+PlayClose.addEventListener("click", function() {
+  closeVisibility(Play)
+})
+
+function addWindowTapHandling(element) {
+  element.addEventListener("mousedown", () =>
+  handleWindowTap (element)
+  )
+}
+
+function handleWindowTap(element) {
+  biggestIndex++;
+  element.style.zIndex = biggestIndex;
+  topbar.style.zIndex = biggestIndex + 1;
+}
+
+addWindowTapHandling(welcomeScreen)
+addWindowTapHandling(AlgebraicScreen)
+addWindowTapHandling(Play)
