@@ -6,10 +6,13 @@ var topbar = document.querySelector("#welcome")
 var AlgebraicScreen = document.querySelector("#AlgebraicScreen")
 var algebraicScreenClose = document.querySelector("#AlgebraicClose")
 var algebraicScreenOpen = document.querySelector("#AlgebraicOpener")
+var AlgebraicMaximize = document.querySelector("#AlgebraicMaximize")
+var AlgebraicMinimize = document.querySelector("#AlgebraicMinimize")
 
 var Play = document.querySelector("#Play")
 var PlayOpener = document.querySelector("#PlayOpener")
 var PlayClose = document.querySelector("#PlayClose")
+var PlayMaximize = document.querySelector("#PlayMaximize")
 
 var TerminalScreen = document.querySelector("#TerminalScreen")
 var TerminalOpen = document.querySelector("#TerminalOpener")
@@ -17,6 +20,8 @@ var TerminalClose = document.querySelector("#TerminalClose")
 var TerminalInput = document.querySelector("#TerminalInput")
 var TerminalHistory = document.querySelector("#TerminalHistory")
 var TerminalMessage = "Welcome to the Terminal. Can't make a move? Perhaps you're in <b><u>Stalemate</u></b>"
+var TerminalMaximize = document.querySelector("#TerminalMaximize")
+var TerminalMinimize = document.querySelector("#TerminalMinimize")
 
 var biggestIndex = 1;
 
@@ -172,12 +177,24 @@ algebraicScreenOpen.addEventListener("click", function() {
   algebraicScreenOpen.classList.add("selected")
 })
 
+AlgebraicMaximize.addEventListener("click", function() {
+  AlgebraicScreen.classList.toggle("maximize")
+})
+
+AlgebraicMinimize.addEventListener("click", function() {
+  closeWindow(AlgebraicScreen)
+})
+
 PlayOpener.addEventListener("click", function() {
   openVisibility(Play)
 })
 
 PlayClose.addEventListener("click", function() {
   closeVisibility(Play)
+})
+
+PlayMaximize.addEventListener("click", function() {
+  Play.classList.toggle("maximize")
 })
 
 TerminalOpen.addEventListener("click", function() {
@@ -188,6 +205,14 @@ TerminalOpen.addEventListener("click", function() {
 TerminalClose.addEventListener("click", function() {
   closeWindow(TerminalScreen)
   TerminalOpen.classList.remove("selected")
+})
+
+TerminalMaximize.addEventListener("click", function() {
+  TerminalScreen.classList.toggle("maximize")
+})
+
+TerminalMinimize.addEventListener("click", function() {
+  closeWindow(TerminalScreen)
 })
 
 addWindowTapHandling(welcomeScreen)
