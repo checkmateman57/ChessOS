@@ -1,7 +1,6 @@
 var welcomeScreen = document.querySelector("#welcomeScreen")
 var welcomeScreenClose = document.querySelector("#welcomeclose")
 var welcomeScreenOpen = document.querySelector("#welcomeopen")
-var topbar = document.querySelector("#welcome")
 
 var AlgebraicScreen = document.querySelector("#AlgebraicScreen")
 var algebraicScreenClose = document.querySelector("#AlgebraicClose")
@@ -86,14 +85,12 @@ function openWindow(element) {
   element.style.display = "block";
   biggestIndex++;
   element.style.zIndex = biggestIndex;
-  topbar.style.zIndex = biggestIndex + 1;
 }
 
 function openVisibility(element) {
   element.style.visibility = "visible";
   biggestIndex++;
   element.style.zIndex = biggestIndex;
-  topbar.style.zIndex = biggestIndex + 1;
 }
 
 function closeVisibility(element) {
@@ -109,7 +106,6 @@ function addWindowTapHandling(element) {
 function handleWindowTap(element) {
   biggestIndex++;
   element.style.zIndex = biggestIndex;
-  topbar.style.zIndex = biggestIndex + 1;
 }
 
 TerminalInput.addEventListener("keydown", function(event) {
