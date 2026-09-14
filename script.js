@@ -23,6 +23,13 @@ var TerminalMessage = "Welcome to the Terminal. Can't make a move? Perhaps you'r
 var TerminalMaximize = document.querySelector("#TerminalMaximize")
 var TerminalMinimize = document.querySelector("#TerminalMinimize")
 
+var HallScreen = document.querySelector("#HallScreen")
+var HallOpener = document.querySelector("#HallOpener")
+var HallClose = document.querySelector("#HallClose")
+var HallMaximize = document.querySelector("#HallMaximize")
+var HallMinimize = document.querySelector("#HallMinimize")
+
+
 var biggestIndex = 1;
 
 
@@ -215,12 +222,32 @@ TerminalMinimize.addEventListener("click", function() {
   closeWindow(TerminalScreen)
 })
 
+HallOpener.addEventListener("click", function() {
+  HallOpener.classList.add("selected")
+  openWindow(HallScreen)
+})
+
+HallClose.addEventListener("click", function() {
+  closeWindow(HallScreen)
+  HallOpener.classList.remove("selected")
+})
+
+HallMaximize.addEventListener("click", function() {
+  HallScreen.classList.toggle("maximize")
+})
+
+HallMinimize.addEventListener("click", function() {
+  closeWindow(HallScreen)
+})
+
 addWindowTapHandling(welcomeScreen)
 addWindowTapHandling(AlgebraicScreen)
 addWindowTapHandling(Play)
 addWindowTapHandling(TerminalScreen)
+addWindowTapHandling(HallScreen)
 
 dragElement(document.getElementById("welcomeScreen"));
 dragElement(document.getElementById("AlgebraicScreen"))
 dragElement(document.getElementById("Play"))
 dragElement(document.getElementById("TerminalScreen"))
+dragElement(document.getElementById("HallScreen"))
