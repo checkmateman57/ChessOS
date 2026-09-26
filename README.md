@@ -29,3 +29,9 @@ You can drag windows across the top bar. That is a design choice. I think it's f
 Overall, this is definitely something to be proud of.  I learned a bit of HTML, eventually got the hang of CSS when I started creating classes for new items instead of exisitng properties, and I got to learn Java as well, which was fun. Sure, it may have taken a bit more time than I anticipated, but I think it's fine, and the end result was worth it. I think that the overall design is amazing, especially with that background image, the colouring of the icons, as well as the windows. However, maybe I could have a bit more variety for window colouring and while it is nice on the background pictures, if you drag a window to the top bar it doesn't look as nice. (Just don't do it!) <br>
 
 <b> This was one of my most enjoyable projects so I hope you enjoy it too!!.</b>
+
+<h1> Hack Club: </h1>
+Thank you to Hack Club for offering such a guide for me to build this amazing website! <br>
+This project was done as a part of their program, Stardance: stardance.hackclub.com <br>
+Their general website is hackclub.com
+
