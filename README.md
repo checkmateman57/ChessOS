@@ -13,7 +13,7 @@ Since I love chess so much, it is only natural that this WebOS be modelled aroun
 <h1> Features: </h1>
 
 Left &#9823; - Opens up the welcome screen to the OS <br>
-Right &#9823; - Opens up a screen to play a chess game against a bo <br>
+Right &#9823; - Opens up a screen to play a chess game against a bot <br>
 &#9820; - Closes the window <br>
 &#9819; - Minimizes the window <br>
 &#9818; - Maximizes the window <br>
